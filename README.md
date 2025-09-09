@@ -1,6 +1,6 @@
 # swift-clang
 
-Clang-C interface for swift binding.
+Swift binding for clang-c interface.
 
 ## References
 - `Cclang` from [llvm-project](https://github.com/llvm/llvm-project)
