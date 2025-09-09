@@ -1222,6 +1222,391 @@ public struct OverloadCandidate: ClangCursorBacked {
     let clang: CXCursor
 }
 
+// MARK: Attribute Types
+
+/// A aligned  attr.
+public struct AlignedAttr: ClangCursorBacked {
+    let clang: CXCursor
+}
+
+/// A convergent  attr.
+public struct ConvergentAttr: ClangCursorBacked {
+    let clang: CXCursor
+}
+
+/// A warn  unused  attr.
+public struct WarnUnusedAttr: ClangCursorBacked {
+    let clang: CXCursor
+}
+
+/// A warn  unused  result  attr.
+public struct WarnUnusedResultAttr: ClangCursorBacked {
+    let clang: CXCursor
+}
+
+// MARK: Declaration Types
+
+/// A concept  decl.
+public struct ConceptDecl: ClangCursorBacked {
+    let clang: CXCursor
+}
+
+/// A friend  decl.
+public struct FriendDecl: ClangCursorBacked {
+    let clang: CXCursor
+}
+
+// MARK: Directive Types
+
+/// A omp  assume  directive.
+public struct OMPAssumeDirective: ClangCursorBacked {
+    let clang: CXCursor
+}
+
+/// A omp  depobj  directive.
+public struct OMPDepobjDirective: ClangCursorBacked {
+    let clang: CXCursor
+}
+
+/// A omp  dispatch  directive.
+public struct OMPDispatchDirective: ClangCursorBacked {
+    let clang: CXCursor
+}
+
+/// A omp  error  directive.
+public struct OMPErrorDirective: ClangCursorBacked {
+    let clang: CXCursor
+}
+
+/// A omp  generic  loop  directive.
+public struct OMPGenericLoopDirective: ClangCursorBacked {
+    let clang: CXCursor
+}
+
+/// A omp  interchange  directive.
+public struct OMPInterchangeDirective: ClangCursorBacked {
+    let clang: CXCursor
+}
+
+/// A omp  interop  directive.
+public struct OMPInteropDirective: ClangCursorBacked {
+    let clang: CXCursor
+}
+
+/// A omp  masked  directive.
+public struct OMPMaskedDirective: ClangCursorBacked {
+    let clang: CXCursor
+}
+
+/// A omp  masked  task  loop  directive.
+public struct OMPMaskedTaskLoopDirective: ClangCursorBacked {
+    let clang: CXCursor
+}
+
+/// A omp  masked  task  loop  simd  directive.
+public struct OMPMaskedTaskLoopSimdDirective: ClangCursorBacked {
+    let clang: CXCursor
+}
+
+/// A omp  master  task  loop  directive.
+public struct OMPMasterTaskLoopDirective: ClangCursorBacked {
+    let clang: CXCursor
+}
+
+/// A omp  master  task  loop  simd  directive.
+public struct OMPMasterTaskLoopSimdDirective: ClangCursorBacked {
+    let clang: CXCursor
+}
+
+/// A omp  meta  directive.
+public struct OMPMetaDirective: ClangCursorBacked {
+    let clang: CXCursor
+}
+
+/// A omp  parallel  generic  loop  directive.
+public struct OMPParallelGenericLoopDirective: ClangCursorBacked {
+    let clang: CXCursor
+}
+
+/// A omp  parallel  masked  directive.
+public struct OMPParallelMaskedDirective: ClangCursorBacked {
+    let clang: CXCursor
+}
+
+/// A omp  parallel  masked  task  loop  directive.
+public struct OMPParallelMaskedTaskLoopDirective: ClangCursorBacked {
+    let clang: CXCursor
+}
+
+/// A omp  parallel  masked  task  loop  simd  directive.
+public struct OMPParallelMaskedTaskLoopSimdDirective: ClangCursorBacked {
+    let clang: CXCursor
+}
+
+/// A omp  parallel  master  directive.
+public struct OMPParallelMasterDirective: ClangCursorBacked {
+    let clang: CXCursor
+}
+
+/// A omp  parallel  master  task  loop  directive.
+public struct OMPParallelMasterTaskLoopDirective: ClangCursorBacked {
+    let clang: CXCursor
+}
+
+/// A omp  parallel  master  task  loop  simd  directive.
+public struct OMPParallelMasterTaskLoopSimdDirective: ClangCursorBacked {
+    let clang: CXCursor
+}
+
+/// A omp  reverse  directive.
+public struct OMPReverseDirective: ClangCursorBacked {
+    let clang: CXCursor
+}
+
+/// A omp  scan  directive.
+public struct OMPScanDirective: ClangCursorBacked {
+    let clang: CXCursor
+}
+
+/// A omp  scope  directive.
+public struct OMPScopeDirective: ClangCursorBacked {
+    let clang: CXCursor
+}
+
+/// A omp  target  parallel  generic  loop  directive.
+public struct OMPTargetParallelGenericLoopDirective: ClangCursorBacked {
+    let clang: CXCursor
+}
+
+/// A omp  target  simd  directive.
+public struct OMPTargetSimdDirective: ClangCursorBacked {
+    let clang: CXCursor
+}
+
+/// A omp  target  teams  directive.
+public struct OMPTargetTeamsDirective: ClangCursorBacked {
+    let clang: CXCursor
+}
+
+/// A omp  target  teams  distribute  directive.
+public struct OMPTargetTeamsDistributeDirective: ClangCursorBacked {
+    let clang: CXCursor
+}
+
+/// A omp  target  teams  distribute  parallel  for  directive.
+public struct OMPTargetTeamsDistributeParallelForDirective: ClangCursorBacked {
+    let clang: CXCursor
+}
+
+/// A omp  target  teams  distribute  parallel  for  simd  directive.
+public struct OMPTargetTeamsDistributeParallelForSimdDirective: ClangCursorBacked {
+    let clang: CXCursor
+}
+
+/// A omp  target  teams  distribute  simd  directive.
+public struct OMPTargetTeamsDistributeSimdDirective: ClangCursorBacked {
+    let clang: CXCursor
+}
+
+/// A omp  target  teams  generic  loop  directive.
+public struct OMPTargetTeamsGenericLoopDirective: ClangCursorBacked {
+    let clang: CXCursor
+}
+
+/// A omp  teams  distribute  directive.
+public struct OMPTeamsDistributeDirective: ClangCursorBacked {
+    let clang: CXCursor
+}
+
+/// A omp  teams  distribute  parallel  for  directive.
+public struct OMPTeamsDistributeParallelForDirective: ClangCursorBacked {
+    let clang: CXCursor
+}
+
+/// A omp  teams  distribute  parallel  for  simd  directive.
+public struct OMPTeamsDistributeParallelForSimdDirective: ClangCursorBacked {
+    let clang: CXCursor
+}
+
+/// A omp  teams  distribute  simd  directive.
+public struct OMPTeamsDistributeSimdDirective: ClangCursorBacked {
+    let clang: CXCursor
+}
+
+/// A omp  teams  generic  loop  directive.
+public struct OMPTeamsGenericLoopDirective: ClangCursorBacked {
+    let clang: CXCursor
+}
+
+/// A omp  tile  directive.
+public struct OMPTileDirective: ClangCursorBacked {
+    let clang: CXCursor
+}
+
+/// A omp  unroll  directive.
+public struct OMPUnrollDirective: ClangCursorBacked {
+    let clang: CXCursor
+}
+
+// MARK: Expression Types
+
+/// A array  section  expr.
+public struct ArraySectionExpr: ClangCursorBacked {
+    let clang: CXCursor
+}
+
+/// A builtin  bit  cast  expr.
+public struct BuiltinBitCastExpr: ClangCursorBacked {
+    let clang: CXCursor
+}
+
+/// A cxx  addrspace  cast  expr.
+public struct CXXAddrspaceCastExpr: ClangCursorBacked {
+    let clang: CXCursor
+}
+
+/// A cxx  paren  list  init  expr.
+public struct CXXParenListInitExpr: ClangCursorBacked {
+    let clang: CXCursor
+}
+
+/// A concept  specialization  expr.
+public struct ConceptSpecializationExpr: ClangCursorBacked {
+    let clang: CXCursor
+}
+
+/// A omp  array  shaping  expr.
+public struct OMPArrayShapingExpr: ClangCursorBacked {
+    let clang: CXCursor
+}
+
+/// A omp  iterator  expr.
+public struct OMPIteratorExpr: ClangCursorBacked {
+    let clang: CXCursor
+}
+
+/// A pack  indexing  expr.
+public struct PackIndexingExpr: ClangCursorBacked {
+    let clang: CXCursor
+}
+
+/// A requires  expr.
+public struct RequiresExpr: ClangCursorBacked {
+    let clang: CXCursor
+}
+
+// MARK: Literal Types
+
+/// A fixed  point  literal.
+public struct FixedPointLiteral: ClangCursorBacked {
+    let clang: CXCursor
+}
+
+/// A flag  enum.
+public struct FlagEnum: ClangCursorBacked {
+    let clang: CXCursor
+}
+
+/// A ns  consumed.
+public struct NSConsumed: ClangCursorBacked {
+    let clang: CXCursor
+}
+
+/// A ns  consumes  self.
+public struct NSConsumesSelf: ClangCursorBacked {
+    let clang: CXCursor
+}
+
+/// A ns  returns  autoreleased.
+public struct NSReturnsAutoreleased: ClangCursorBacked {
+    let clang: CXCursor
+}
+
+/// A ns  returns  not  retained.
+public struct NSReturnsNotRetained: ClangCursorBacked {
+    let clang: CXCursor
+}
+
+/// A ns  returns  retained.
+public struct NSReturnsRetained: ClangCursorBacked {
+    let clang: CXCursor
+}
+
+/// A omp  canonical  loop.
+public struct OMPCanonicalLoop: ClangCursorBacked {
+    let clang: CXCursor
+}
+
+/// A obj c  boxable.
+public struct ObjCBoxable: ClangCursorBacked {
+    let clang: CXCursor
+}
+
+/// A obj c  designated  initializer.
+public struct ObjCDesignatedInitializer: ClangCursorBacked {
+    let clang: CXCursor
+}
+
+/// A obj c  exception.
+public struct ObjCException: ClangCursorBacked {
+    let clang: CXCursor
+}
+
+/// A obj c  explicit  protocol  impl.
+public struct ObjCExplicitProtocolImpl: ClangCursorBacked {
+    let clang: CXCursor
+}
+
+/// A obj c  independent  class.
+public struct ObjCIndependentClass: ClangCursorBacked {
+    let clang: CXCursor
+}
+
+/// A obj cns  object.
+public struct ObjCNSObject: ClangCursorBacked {
+    let clang: CXCursor
+}
+
+/// A obj c  precise  lifetime.
+public struct ObjCPreciseLifetime: ClangCursorBacked {
+    let clang: CXCursor
+}
+
+/// A obj c  requires  super.
+public struct ObjCRequiresSuper: ClangCursorBacked {
+    let clang: CXCursor
+}
+
+/// A obj c  returns  inner  pointer.
+public struct ObjCReturnsInnerPointer: ClangCursorBacked {
+    let clang: CXCursor
+}
+
+/// A obj c  root  class.
+public struct ObjCRootClass: ClangCursorBacked {
+    let clang: CXCursor
+}
+
+/// A obj c  runtime  visible.
+public struct ObjCRuntimeVisible: ClangCursorBacked {
+    let clang: CXCursor
+}
+
+/// A obj c  subclassing  restricted.
+public struct ObjCSubclassingRestricted: ClangCursorBacked {
+    let clang: CXCursor
+}
+
+/// A open acc  compute  construct.
+public struct OpenACCComputeConstruct: ClangCursorBacked {
+    let clang: CXCursor
+}
+
+/// A open acc  loop  construct.
+public struct OpenACCLoopConstruct: ClangCursorBacked {
+    let clang: CXCursor
+}
+
 /// Converts a CXCursor to a Cursor, returning `nil` if it was unsuccessful
 func convertCursor(_ clang: CXCursor) -> Cursor? {
     if clang_Cursor_isNull(clang) != 0 { return nil }
@@ -1430,6 +1815,82 @@ func convertCursor(_ clang: CXCursor) -> Cursor? {
     case CXCursor_TypeAliasTemplateDecl: return TypeAliasTemplateDecl(clang: clang)
     case CXCursor_StaticAssert: return StaticAssert(clang: clang)
     case CXCursor_OverloadCandidate: return OverloadCandidate(clang: clang)
+        
+    case CXCursor_AlignedAttr: return AlignedAttr(clang: clang)
+    case CXCursor_ArraySectionExpr: return ArraySectionExpr(clang: clang)
+    case CXCursor_BuiltinBitCastExpr: return BuiltinBitCastExpr(clang: clang)
+    case CXCursor_CXXAddrspaceCastExpr: return CXXAddrspaceCastExpr(clang: clang)
+    case CXCursor_CXXParenListInitExpr: return CXXParenListInitExpr(clang: clang)
+    case CXCursor_ConceptDecl: return ConceptDecl(clang: clang)
+    case CXCursor_ConceptSpecializationExpr: return ConceptSpecializationExpr(clang: clang)
+    case CXCursor_ConvergentAttr: return ConvergentAttr(clang: clang)
+    case CXCursor_FixedPointLiteral: return FixedPointLiteral(clang: clang)
+    case CXCursor_FlagEnum: return FlagEnum(clang: clang)
+    case CXCursor_FriendDecl: return FriendDecl(clang: clang)
+    case CXCursor_NSConsumed: return NSConsumed(clang: clang)
+    case CXCursor_NSConsumesSelf: return NSConsumesSelf(clang: clang)
+    case CXCursor_NSReturnsAutoreleased: return NSReturnsAutoreleased(clang: clang)
+    case CXCursor_NSReturnsNotRetained: return NSReturnsNotRetained(clang: clang)
+    case CXCursor_NSReturnsRetained: return NSReturnsRetained(clang: clang)
+    case CXCursor_OMPArrayShapingExpr: return OMPArrayShapingExpr(clang: clang)
+    case CXCursor_OMPAssumeDirective: return OMPAssumeDirective(clang: clang)
+    case CXCursor_OMPCanonicalLoop: return OMPCanonicalLoop(clang: clang)
+    case CXCursor_OMPDepobjDirective: return OMPDepobjDirective(clang: clang)
+    case CXCursor_OMPDispatchDirective: return OMPDispatchDirective(clang: clang)
+    case CXCursor_OMPErrorDirective: return OMPErrorDirective(clang: clang)
+    case CXCursor_OMPGenericLoopDirective: return OMPGenericLoopDirective(clang: clang)
+    case CXCursor_OMPInterchangeDirective: return OMPInterchangeDirective(clang: clang)
+    case CXCursor_OMPInteropDirective: return OMPInteropDirective(clang: clang)
+    case CXCursor_OMPIteratorExpr: return OMPIteratorExpr(clang: clang)
+    case CXCursor_OMPMaskedDirective: return OMPMaskedDirective(clang: clang)
+    case CXCursor_OMPMaskedTaskLoopDirective: return OMPMaskedTaskLoopDirective(clang: clang)
+    case CXCursor_OMPMaskedTaskLoopSimdDirective: return OMPMaskedTaskLoopSimdDirective(clang: clang)
+    case CXCursor_OMPMasterTaskLoopDirective: return OMPMasterTaskLoopDirective(clang: clang)
+    case CXCursor_OMPMasterTaskLoopSimdDirective: return OMPMasterTaskLoopSimdDirective(clang: clang)
+    case CXCursor_OMPMetaDirective: return OMPMetaDirective(clang: clang)
+    case CXCursor_OMPParallelGenericLoopDirective: return OMPParallelGenericLoopDirective(clang: clang)
+    case CXCursor_OMPParallelMaskedDirective: return OMPParallelMaskedDirective(clang: clang)
+    case CXCursor_OMPParallelMaskedTaskLoopDirective: return OMPParallelMaskedTaskLoopDirective(clang: clang)
+    case CXCursor_OMPParallelMaskedTaskLoopSimdDirective: return OMPParallelMaskedTaskLoopSimdDirective(clang: clang)
+    case CXCursor_OMPParallelMasterDirective: return OMPParallelMasterDirective(clang: clang)
+    case CXCursor_OMPParallelMasterTaskLoopDirective: return OMPParallelMasterTaskLoopDirective(clang: clang)
+    case CXCursor_OMPParallelMasterTaskLoopSimdDirective: return OMPParallelMasterTaskLoopSimdDirective(clang: clang)
+    case CXCursor_OMPReverseDirective: return OMPReverseDirective(clang: clang)
+    case CXCursor_OMPScanDirective: return OMPScanDirective(clang: clang)
+    case CXCursor_OMPScopeDirective: return OMPScopeDirective(clang: clang)
+    case CXCursor_OMPTargetParallelGenericLoopDirective: return OMPTargetParallelGenericLoopDirective(clang: clang)
+    case CXCursor_OMPTargetSimdDirective: return OMPTargetSimdDirective(clang: clang)
+    case CXCursor_OMPTargetTeamsDirective: return OMPTargetTeamsDirective(clang: clang)
+    case CXCursor_OMPTargetTeamsDistributeDirective: return OMPTargetTeamsDistributeDirective(clang: clang)
+    case CXCursor_OMPTargetTeamsDistributeParallelForDirective: return OMPTargetTeamsDistributeParallelForDirective(clang: clang)
+    case CXCursor_OMPTargetTeamsDistributeParallelForSimdDirective: return OMPTargetTeamsDistributeParallelForSimdDirective(clang: clang)
+    case CXCursor_OMPTargetTeamsDistributeSimdDirective: return OMPTargetTeamsDistributeSimdDirective(clang: clang)
+    case CXCursor_OMPTargetTeamsGenericLoopDirective: return OMPTargetTeamsGenericLoopDirective(clang: clang)
+    case CXCursor_OMPTeamsDistributeDirective: return OMPTeamsDistributeDirective(clang: clang)
+    case CXCursor_OMPTeamsDistributeParallelForDirective: return OMPTeamsDistributeParallelForDirective(clang: clang)
+    case CXCursor_OMPTeamsDistributeParallelForSimdDirective: return OMPTeamsDistributeParallelForSimdDirective(clang: clang)
+    case CXCursor_OMPTeamsDistributeSimdDirective: return OMPTeamsDistributeSimdDirective(clang: clang)
+    case CXCursor_OMPTeamsGenericLoopDirective: return OMPTeamsGenericLoopDirective(clang: clang)
+    case CXCursor_OMPTileDirective: return OMPTileDirective(clang: clang)
+    case CXCursor_OMPUnrollDirective: return OMPUnrollDirective(clang: clang)
+    case CXCursor_ObjCBoxable: return ObjCBoxable(clang: clang)
+    case CXCursor_ObjCDesignatedInitializer: return ObjCDesignatedInitializer(clang: clang)
+    case CXCursor_ObjCException: return ObjCException(clang: clang)
+    case CXCursor_ObjCExplicitProtocolImpl: return ObjCExplicitProtocolImpl(clang: clang)
+    case CXCursor_ObjCIndependentClass: return ObjCIndependentClass(clang: clang)
+    case CXCursor_ObjCNSObject: return ObjCNSObject(clang: clang)
+    case CXCursor_ObjCPreciseLifetime: return ObjCPreciseLifetime(clang: clang)
+    case CXCursor_ObjCRequiresSuper: return ObjCRequiresSuper(clang: clang)
+    case CXCursor_ObjCReturnsInnerPointer: return ObjCReturnsInnerPointer(clang: clang)
+    case CXCursor_ObjCRootClass: return ObjCRootClass(clang: clang)
+    case CXCursor_ObjCRuntimeVisible: return ObjCRuntimeVisible(clang: clang)
+    case CXCursor_ObjCSubclassingRestricted: return ObjCSubclassingRestricted(clang: clang)
+    case CXCursor_OpenACCComputeConstruct: return OpenACCComputeConstruct(clang: clang)
+    case CXCursor_OpenACCLoopConstruct: return OpenACCLoopConstruct(clang: clang)
+    case CXCursor_PackIndexingExpr: return PackIndexingExpr(clang: clang)
+    case CXCursor_RequiresExpr: return RequiresExpr(clang: clang)
+    case CXCursor_WarnUnusedAttr: return WarnUnusedAttr(clang: clang)
+    case CXCursor_WarnUnusedResultAttr: return WarnUnusedResultAttr(clang: clang)
     default: fatalError("invalid CXCursorKind \(clang)")
     }
 }

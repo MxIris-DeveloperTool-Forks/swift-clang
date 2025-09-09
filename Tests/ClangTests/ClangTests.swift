@@ -255,6 +255,36 @@ class ClangTests: XCTestCase {
         }
     }
 
+    func testSwiftNameMacro() {
+        do {
+            let filename = testFile(for: "swiftname.m")
+            let unit = try TranslationUnit(filename: filename, commandLineArgs: [
+                "-isysroot", 
+                "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk",
+                "-F/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks",
+                "-x", "objective-c",
+                "-fmodules",
+            ])
+
+            let indexerCallbacks = Clang.IndexerCallbacks()
+//            var functionsFound = Set<String>()
+            indexerCallbacks.indexDeclaration = { decl in
+                guard let cursor = decl.cursor else { return }
+                print(cursor)
+                for child in cursor.children() {
+                    print(child.isAttribute)
+                    print(unit.tokens(in: child.range))
+                }
+            }
+
+            try unit.indexTranslationUnit(indexAction: IndexAction(),
+                                          indexerCallbacks: indexerCallbacks,
+                                          options: [.indexFunctionLocalSymbols, .indexImplicitTemplateInstantiations])
+        } catch {
+            XCTFail("\(error)")
+        }
+    }
+
     static var allTests: [(String, (ClangTests) -> () throws -> Void)] {
         return [
             ("testInitUsingStringAsSource", testInitUsingStringAsSource),
