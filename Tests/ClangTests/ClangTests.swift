@@ -264,22 +264,15 @@ class ClangTests: XCTestCase {
                 "-F/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks",
                 "-x", "objective-c",
                 "-fmodules",
-            ])
-
-            let indexerCallbacks = Clang.IndexerCallbacks()
-//            var functionsFound = Set<String>()
-            indexerCallbacks.indexDeclaration = { decl in
-                guard let cursor = decl.cursor else { return }
-                print(cursor)
-                for child in cursor.children() {
-                    print(child.isAttribute)
-                    print(unit.tokens(in: child.range))
+            ], options: [.detailedPreprocessingRecord])
+            unit.cursor.visitChildren { cursor in
+                guard cursor.range.end.isFromMainFile else { return .recurse }
+                for token in unit.tokens(in: cursor.range) {
+                    print(token.spelling(in: unit))
                 }
+//                print(cursor.children())
+                return .recurse
             }
-
-            try unit.indexTranslationUnit(indexAction: IndexAction(),
-                                          indexerCallbacks: indexerCallbacks,
-                                          options: [.indexFunctionLocalSymbols, .indexImplicitTemplateInstantiations])
         } catch {
             XCTFail("\(error)")
         }
